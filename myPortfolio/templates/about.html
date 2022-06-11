@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+
+{% block aboutactive %}active{% endblock aboutactive %}
+{% block title %}About Us | ProgrammingWithShiv{% endblock title %}
+
+{% block body %}
+{% load static %}
+<!-- Cards -->
+<div class="container py-4">
+    <h2 class="text-center mb-4">My Projects</h2>
+    <div class="row">
+
+        <div class="col-md-4">
+            <div class="card" style="width: 18rem;">
+                <img src="{% static 'img/img_1.jpg' %}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Python/Django Developer</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's
+                        content.</p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card" style="width: 18rem;">
+                <img src="{% static 'img/img_2.jpg' %}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Web Designer</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's
+                        content.</p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card" style="width: 18rem;">
+                <img src="{% static 'img/img_3.jpg' %}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Blogger</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the
+                        card's
+                        content.</p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!-- Video Resume -->
+<div class="container mt-2 mb-5">
+    <h2 class="text-center mb-4">Video Resume</h2>
+    <div class="ratio ratio-21x9">
+        <iframe src="https://www.youtube.com/embed/zpOULjyy-n8?rel=0" title="YouTube video" allowfullscreen></iframe>
+    </div>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatem, vero.</p>
+</div>
+
+{% endblock body %}

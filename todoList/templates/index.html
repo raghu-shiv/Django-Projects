@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block homeactive %}active{% endblock homeactive %}
+{% block title %}Home | ToDo{% endblock title %}
+{% block body %}
+
+<!-- Success Alert -->
+{% if success %}
+<div class="alert alert-success alert-dismissible fade show" role="alert">
+  <strong>Hello!</strong> Your task has been added successfully.
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+{% endif %}
+
+<!-- Task Form -->
+<div class="container pb-5">
+  <h2 class="py-2 text-center">Welcome to ToDo App, {{name}}</h2>
+  <h3 class="mb-4">Add a Task</h3>
+  <form method="post" action="/">
+    {% csrf_token %}
+    <div class="mb-3">
+      <label for="title" class="form-label">Task Title</label>
+      <input type="text" class="form-control" name="title" id="title">
+    </div>
+    <div class="mb-3">
+      <label for="desc" class="form-label">Task Description</label>
+      <textarea class="form-control" name="desc" id="desc" rows="8"></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>
+
+{% endblock body %}
